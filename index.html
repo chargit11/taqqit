@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taqqit - Discover & Save Ideas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">TAQQIT</div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search ideas: brutalism, stoicism, design systems...">
+            </div>
+            <div class="nav-links">
+                <button class="nav-btn">Home</button>
+                <button class="nav-btn">Explore</button>
+                <button class="nav-btn">Create</button>
+                <button class="nav-btn primary">Sign Up</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="categories">
+        <div class="category-container" id="categoryContainer">
+            <!-- Categories will be loaded dynamically -->
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="masonry-grid" id="grid"></div>
+    </div>
+
+    <button class="fab" id="fabBtn">+</button>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">×</button>
+            <div class="modal-image" id="modalImage"></div>
+            <div class="modal-info">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-description" id="modalDescription"></p>
+                <div class="pin-footer">
+                    <div class="pin-user">
+                        <div class="user-avatar" id="modalAvatar"></div>
+                        <div class="user-name" id="modalUser"></div>
+                    </div>
+                    <button class="save-btn" style="padding: 12px 24px; font-size: 15px;">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/pins.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
