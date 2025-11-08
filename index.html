@@ -447,7 +447,7 @@ nav {
         <nav>
             <div class="logo">TAQQIT</div>
             <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Search: liminal spaces, backrooms, vaporwave...">
+                <input type="text" id="searchInput" placeholder="Search: architecture, backrooms, mysteries...">
             </div>
             <div class="nav-links">
                 <button class="nav-btn">Home</button>
@@ -490,81 +490,85 @@ nav {
 // Categories
 const categories = ["All","Cars & Motorcycles","Fitness & Training","Style & Fashion","Tech & Gadgets","Watches","Cooking & BBQ","Home & Workshop","Travel & Adventure","Business & Finance","Sports","Gaming"];
 
-// Pins data - REAL interesting rabbit holes
+// Pins data - Documentaries + Rabbit holes
 const pins = [
-    {title: "The Backrooms: Level 0",description: "The original liminal space. Yellow wallpaper, humming fluorescent lights, 600 million square miles of randomly segmented empty rooms. You no-clipped out of reality.",user: "Kane P.",category: "Gaming",image: "https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?w=400&h=320",height: 320},
+    {title: "My Architect: A Son's Journey",description: "Nathaniel Kahn explores his father Louis Kahn's legacy. The man behind IIM Ahmedabad, Salk Institute. Genius architect, absent father. Buildings as autobiography.",user: "Nathaniel K.",category: "Home & Workshop",image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=320",height: 320},
     
-    {title: "Dead Mall Aesthetic",description: "Abandoned shopping centers frozen in 1992. The architecture of American consumerism's slow death. Fountains turned off. Food courts with no people.",user: "Dan B.",category: "Travel & Adventure",image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=280",height: 280},
+    {title: "The Backrooms: Level 0",description: "The original liminal space. Yellow wallpaper, humming fluorescent lights, 600 million square miles of randomly segmented empty rooms. You no-clipped out of reality.",user: "Kane P.",category: "Gaming",image: "https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?w=400&h=280",height: 280},
     
-    {title: "Vaporwave Origins & Death",description: "Started as satirical capitalism critique. Became the aesthetic it mocked. Floral Shoppe. Blank Banshee. The genre that ate itself.",user: "Macintosh P.",category: "Tech & Gadgets",image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=340",height: 340},
+    {title: "Abstract: The Art of Design",description: "Netflix series diving into creative minds. Bjarke Ingels, Olafur Eliasson, Neri Oxman. How design shapes everything. Season 1 & 2 available.",user: "Scott D.",category: "Tech & Gadgets",image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=340",height: 340},
     
-    {title: "Brutalist Bus Stops of USSR",description: "Concrete sculptures disguised as shelter. Yugoslav architects making art for commuters. Photography book sold for $1,200. Soviet futurism frozen.",user: "Christopher H.",category: "Travel & Adventure",image: "https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?w=400&h=300",height: 300},
+    {title: "Dead Mall Aesthetic",description: "Abandoned shopping centers frozen in 1992. The architecture of American consumerism's slow death. Fountains turned off. Food courts with no people.",user: "Dan B.",category: "Travel & Adventure",image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=300",height: 300},
     
-    {title: "The Witness: Environmental Storytelling",description: "Jonathan Blow's $6M puzzle game. No text, no NPCs. Island speaks through architecture. Players find meaning in absence. 677 puzzles hide the real puzzle.",user: "Jonathan B.",category: "Gaming",image: "https://images.unsplash.com/photo-1518895312237-a9e23508077d?w=400&h=280",height: 280},
+    {title: "Rams Documentary",description: "Dieter Rams' 60-year career at Braun. The man who designed your iPhone before iPhones existed. 'Less but better.' His regret about overconsumption.",user: "Gary H.",category: "Tech & Gadgets",image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=400&h=280",height: 280},
     
     {title: "Kowloon Walled City Density",description: "33,000 people per square kilometer. No government, no building codes for 40 years. Demolished 1993. Cyberpunk made real. Vertical slums as organism.",user: "Greg G.",category: "Home & Workshop",image: "https://images.unsplash.com/photo-1541544181051-e46607bc22a4?w=400&h=310",height: 310},
     
-    {title: "Antarctic Pyramid Discovery",description: "Google Earth coordinates: 79°58'39.25\"S 81°57'32.21\"W. Natural rock formation or evidence of ancient civilization? The debate that won't die.",user: "coord hunter",category: "Travel & Adventure",image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=360",height: 360},
+    {title: "Helvetica Film",description: "Documentary about the typeface that conquered the world. Born 1957, now everywhere. NYC Subway, IRS forms, corporate logos. Neutrality as style.",user: "Gary H.",category: "Style & Fashion",image: "https://images.unsplash.com/photo-1590859808308-3d2d9c515b1a?w=400&h=360",height: 360},
     
     {title: "The Dyatlov Pass Incident",description: "Nine hikers died in Ural Mountains, 1959. Tent cut from inside. Radiation on clothes. Crushed ribs, no external trauma. Still unexplained.",user: "Yuri Y.",category: "Travel & Adventure",image: "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=400&h=290",height: 290},
     
-    {title: "Numbers Stations: UVB-76",description: "Russian radio buzzes since 1982. Sometimes voice reads numbers. Purpose unknown. Still broadcasting. 4625 kHz. Listen at night.",user: "Signal_",category: "Tech & Gadgets",image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=400&h=320",height: 320},
+    {title: "Eames: The Architect & The Painter",description: "Charles and Ray Eames. The chair. The house. The films. Peabody Award winner. How a married couple changed American design forever.",user: "PBS",category: "Home & Workshop",image: "https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=400&h=320",height: 320},
     
-    {title: "Weirdcore Aesthetics",description: "Intentionally unsettling low-quality dreamlike images. Text overlays asking existential questions. The opposite of Instagram. Eyes in wrong places.",user: "glitch.jpg",category: "Style & Fashion",image: "https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?w=400&h=340",height: 340},
+    {title: "Numbers Stations: UVB-76",description: "Russian radio buzzes since 1982. Sometimes voice reads numbers. Purpose unknown. Still broadcasting. 4625 kHz. Listen at night.",user: "Signal_",category: "Tech & Gadgets",image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=400&h=340",height: 340},
     
-    {title: "Mystery of Cicada 3301",description: "Internet's most elaborate puzzle. Posted 2012-2014. Cryptography, steganography, ancient texts. Recruits for what? Organization never confirmed. Unsolved.",user: "Anonymous",category: "Tech & Gadgets",image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=270",height: 270},
+    {title: "The Pruitt-Igoe Myth",description: "St. Louis housing project. Hailed as future, demolished after 16 years. What happened? Urban renewal's biggest failure, documented.",user: "Chad F.",category: "Home & Workshop",image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=400&h=270",height: 270},
     
-    {title: "Myhouse.wad Explained",description: "DOOM mod that's actually psychological horror. Infinite bathroom. House changes. Mark's trauma encoded in level geometry. Backrooms before Backrooms.",user: "veddge",category: "Gaming",image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400&h=300",height: 300},
+    {title: "Mystery of Cicada 3301",description: "Internet's most elaborate puzzle. Posted 2012-2014. Cryptography, steganography, ancient texts. Recruits for what? Organization never confirmed. Unsolved.",user: "Anonymous",category: "Tech & Gadgets",image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300",height: 300},
     
-    {title: "Soviet Microdistricts",description: "Khrushchyovka apartments. Identical 5-story blocks. 64 million people still live in them. Social engineering through architecture. Community by force.",user: "Nikita K.",category: "Home & Workshop",image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=400&h=290",height: 290},
+    {title: "Barbican: Living in Brutalism",description: "Ila Bêka & Louise Lemoine film. London's icon through resident stories. Brutalist dream or concrete nightmare? People who call it home.",user: "Ila B.",category: "Home & Workshop",image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=290",height: 290},
     
-    {title: "Analog Horror Format",description: "Local 58, Gemini Home Entertainment. Found footage VHS tapes from alternate timeline. Emergency broadcasts going wrong. The analog corrupts.",user: "Kris S.",category: "Gaming",image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400&h=310",height: 310},
+    {title: "Weirdcore Aesthetics",description: "Intentionally unsettling low-quality dreamlike images. Text overlays asking existential questions. The opposite of Instagram. Eyes in wrong places.",user: "glitch.jpg",category: "Style & Fashion",image: "https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?w=400&h=310",height: 310},
     
-    {title: "Max Headroom Broadcast Signal Intrusion",description: "Nov 22, 1987. Chicago TV hijacked. Man in Max Headroom mask. Never caught. 14 years before 9/11. FBI's longest open investigation.",user: "ChicagoTV",category: "Tech & Gadgets",image: "https://images.unsplash.com/photo-1560169897-fc0cdbdfa4d5?w=400&h=280",height: 280},
-    
-    {title: "Uncanny Valley in Robotics",description: "Masahiro Mori's 1970 theory. Robots look 99% human = revulsion. The valley between mechanical and human. Why CGI animals feel wrong.",user: "Masahiro M.",category: "Tech & Gadgets",image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300",height: 300},
+    {title: "Archiculture: Studio Life",description: "25-minute look inside architectural education. All-nighters. Critique culture. Students' final projects. The reality behind the glamour.",user: "Archiculture",category: "Home & Workshop",image: "https://images.unsplash.com/photo-1581092918484-8313e1f6e686?w=400&h=280",height: 280},
     
     {title: "Centralia, PA: Town on Fire",description: "Coal mine fire burning since 1962. Won't stop until 2262. Population: 5. Inspiration for Silent Hill. Ground temperature: 900°F.",user: "Centralia",category: "Travel & Adventure",image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&h=340",height: 340},
     
-    {title: "Doggerland: Atlantis of North Sea",description: "Britain connected to Europe until 6500 BC. Flooded after ice age. Stone age civilization underwater. Fishing nets pull up mammoth bones.",user: "Vincent G.",category: "Travel & Adventure",image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=280",height: 280},
+    {title: "Koolhaas Houselife",description: "Rem Koolhaas' Maison à Bordeaux. Told by housekeeper Guadalupe Acedo. Architecture through the person who cleans it. Unexpected POV.",user: "Ila B.",category: "Home & Workshop",image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&h=280",height: 280},
     
     {title: "SCP Foundation as Literature",description: "Collaborative fiction. 7,000+ entries. Clinical tone hiding cosmic horror. What if X-Files was real? The database that became mythology.",user: "Dr. Bright",category: "Gaming",image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=400&h=310",height: 310},
     
-    {title: "Phantom Time Hypothesis",description: "Heribert Illig claims years 614-911 AD never happened. Charlemagne fictional. Calendar fabricated. Evidence: missing archaeological layer. Academic community: no.",user: "Heribert I.",category: "Travel & Adventure",image: "https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=400&h=260",height: 260},
+    {title: "The Human Shelter",description: "How people build homes in extreme places. Iceland. War zones. Refugee camps. Boris Bertram's exploration of shelter and survival.",user: "Boris B.",category: "Travel & Adventure",image: "https://images.unsplash.com/photo-1464146072230-91cabc968266?w=400&h=260",height: 260},
     
     {title: "Stroad: The Ugliest Thing",description: "Street + Road = Stroad. Too fast for pedestrians, too slow for cars. American suburbia's design flaw. Not Just Bikes exposed it. You see it everywhere now.",user: "Jason S.",category: "Cars & Motorcycles",image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=330",height: 330},
     
-    {title: "Aokigahara Forest Silence",description: "Japan's suicide forest. Magnetic iron deposits scramble compasses. So dense sound stops. Annual body sweep. Signs asking you to reconsider.",user: "forest walker",category: "Travel & Adventure",image: "https://images.unsplash.com/photo-1511497584788-876760111969?w=400&h=290",height: 290},
+    {title: "Microtopia: Tiny Living",description: "Floating houses, portable homes, shipping containers. People rejecting square footage. Is it freedom or just gentrification of minimalism?",user: "Rohan S.",category: "Home & Workshop",image: "https://images.unsplash.com/photo-1562259929-1ba40a1ec1d6?w=400&h=290",height: 290},
     
-    {title: "Loneliness Epidemic Data",description: "60% of young men report having no close friends. Male friendship crisis. Third places disappeared. Bowling Alone was right. The Great Isolation quantified.",user: "Robert P.",category: "Business & Finance",image: "https://images.unsplash.com/photo-1494178270175-e96de2971df9?w=400&h=320",height: 320},
+    {title: "Max Headroom Broadcast Intrusion",description: "Nov 22, 1987. Chicago TV hijacked. Man in Max Headroom mask. Never caught. 14 years before 9/11. FBI's longest open investigation.",user: "ChicagoTV",category: "Tech & Gadgets",image: "https://images.unsplash.com/photo-1560169897-fc0cdbdfa4d5?w=400&h=320",height: 320},
     
-    {title: "Project Cybersyn Dashboard",description: "Chile's socialist AI from 1971. Stafford Beer designed economy controller. Ops room looks like Enterprise bridge. Ended with Pinochet coup.",user: "Salvador A.",category: "Tech & Gadgets",image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=340",height: 340},
+    {title: "Big Bjarke",description: "Bjarke Ingels reveals demands of thriving career. NYC's World Trade Center. Personal life cost. Inside the creative mind of BIG architecture.",user: "Kaspar A.",category: "Home & Workshop",image: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=400&h=340",height: 340},
     
     {title: "Poolrooms Aesthetic",description: "Subgenre of Backrooms. Indoor pools at 3AM. Tile echoes. Chlorine smell encoded in pixels. The uncanny of recreational spaces empty.",user: "poolcore",category: "Gaming",image: "https://images.unsplash.com/photo-1519455953755-af066f52f1a6?w=400&h=270",height: 270},
     
-    {title: "Helvetica's Accidental Dominance",description: "1957 typeface. Now in 100 major brands. IRS tax forms. NYC Subway. Corporate neutrality as style. The font that ate the world.",user: "Eduard H.",category: "Style & Fashion",image: "https://images.unsplash.com/photo-1590859808308-3d2d9c515b1a?w=400&h=320",height: 320},
+    {title: "Unfinished Spaces: Cuba",description: "National Art Schools Cuba. Revolutionary architecture abandoned mid-construction. Ricardo Porro, Roberto Gottardi, Vittorio Garatti. Dreams in ruins.",user: "Alysa N.",category: "Home & Workshop",image: "https://images.unsplash.com/photo-1518895312237-a9e23508077d?w=400&h=320",height: 320},
     
     {title: "Russian Sleep Experiment",description: "Creepypasta. Five prisoners. Experimental gas. 15 days no sleep. What happened after. Entire internet knows this story. All fake. Still scary.",user: "unknown",category: "Fitness & Training",image: "https://images.unsplash.com/photo-1541845157-a6d2d100c931?w=400&h=300",height: 300},
     
-    {title: "Shipping Container Architecture",description: "$3,000 for 320 sq ft structure. Stack them. Cut windows. Modern prefab. Actual solution or Pinterest aesthetic? Both. Neither.",user: "Adam K.",category: "Home & Workshop",image: "https://images.unsplash.com/photo-1562259929-1ba40a1ec1d6?w=400&h=280",height: 280},
+    {title: "Home of the Brick: LEGO House",description: "BIG's LEGO House documentary. Seven years of design. Bjarke Ingels building childhood dreams in Billund, Denmark. Architecture made of play.",user: "LEGO",category: "Home & Workshop",image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=280",height: 280},
     
     {title: "Kessler Syndrome",description: "Cascading satellite collisions. One collision creates debris. Debris hits more satellites. Chain reaction. Space becomes unusable. We're close.",user: "Donald K.",category: "Tech & Gadgets",image: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=400&h=340",height: 340},
     
-    {title: "Boring Dystopia Subreddit",description: "r/ABoringDystopia. GoFundMe for insulin. Uplifting news that's actually horrifying. Orphan crushing machine. The hell we normalized.",user: "reddit",category: "Business & Finance",image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=290",height: 290},
+    {title: "Sketches of Frank Gehry",description: "Sydney Pollack's portrait of Frank Gehry. Guggenheim Bilbao. Disney Hall. The architect who made buildings dance. Creative process revealed.",user: "Sydney P.",category: "Home & Workshop",image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=290",height: 290},
     
     {title: "Winchester Mystery House Logic",description: "Stairs to nowhere. Doors opening to walls. Sarah Winchester built for 38 years. No master plan. Guilt over rifle deaths. Architecture of madness.",user: "Sarah W.",category: "Home & Workshop",image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&h=310",height: 310},
     
-    {title: "The Bloop Sound",description: "1997. Ultra-low frequency underwater sound. Louder than any whale. Source: Unknown. NOAA recorded it. Likely iceberg. Possibly kraken. Decide yourself.",user: "NOAA",category: "Travel & Adventure",image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=260",height: 260},
+    {title: "Architecture of Infinity",description: "Christoph Schaub's film on spiritual spaces. Peter Zumthor, Álvaro Siza, James Turrell. Buildings designed for transcendence.",user: "Christoph S.",category: "Home & Workshop",image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400&h=260",height: 260},
     
-    {title: "Manufactured Authenticity",description: "Brooklyn coffee shop playbook. Exposed brick. Edison bulbs. Reclaimed wood. Same template globally. Authenticity industrialized. The aesthetic that won.",user: "urbanist",category: "Style & Fashion",image: "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&h=330",height: 330},
+    {title: "Boring Dystopia Subreddit",description: "r/ABoringDystopia. GoFundMe for insulin. Uplifting news that's actually horrifying. Orphan crushing machine. The hell we normalized.",user: "reddit",category: "Business & Finance",image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=330",height: 330},
     
-    {title: "Time Cube Theory",description: "Gene Ray's website. Four simultaneous days in single rotation. Educated stupid. Harmonic cube principle. Absolute madness. Preserved as internet artifact.",user: "Gene R.",category: "Business & Finance",image: "https://images.unsplash.com/photo-1451847251646-8a6c0dd1510c?w=400&h=290",height: 290},
+    {title: "Elevation: Drone Cities",description: "Dezeen's documentary on drone technology. Norman Foster, Liam Young. Future cities. How drones change architecture and urban planning.",user: "Dezeen",category: "Tech & Gadgets",image: "https://images.unsplash.com/photo-1508444845599-5c89863b1c44?w=400&h=290",height: 290},
     
-    {title: "Planned Obsolescence Documentation",description: "Lightbulb cartel. iPhone batteries. Right to repair fight. Products designed to fail. The Phoebus cartel. Capitalism's dirtiest secret, documented.",user: "Louis R.",category: "Tech & Gadgets",image: "https://images.unsplash.com/photo-1563770660941-20978e870e26?w=400&h=320",height: 320},
+    {title: "The Bloop Sound",description: "1997. Ultra-low frequency underwater sound. Louder than any whale. Source: Unknown. NOAA recorded it. Likely iceberg. Possibly kraken. Decide yourself.",user: "NOAA",category: "Travel & Adventure",image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=320",height: 320},
     
-    {title: "Liminal Spaces Philosophy",description: "Threshold between states. Airport at 4AM. Empty parking structure. Transitional non-places. Marc Augé's non-lieux. The architecture of nowhere.",user: "Marc A.",category: "Travel & Adventure",image: "https://images.unsplash.com/photo-1554310603-d39d43033735?w=400&h=300",height: 300},
+    {title: "Manufactured Authenticity",description: "Brooklyn coffee shop playbook. Exposed brick. Edison bulbs. Reclaimed wood. Same template globally. Authenticity industrialized. The aesthetic that won.",user: "urbanist",category: "Style & Fashion",image: "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&h=300",height: 300},
     
-    {title: "Mandela Effect Examples",description: "Berenstain Bears. Monopoly Man monocle. We are the champions. Collective false memory. Parallel universe or brain glitch? Internet can't agree.",user: "Fiona B.",category: "Gaming",image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=280",height: 280}
+    {title: "City Dreamers",description: "Four women in architecture. Phyllis Lambert, Denise Scott Brown, Cornelia Hahn Oberlander, Blanche Lemco van Ginkel. Shaping cities. Fighting for recognition.",user: "Joseph H.",category: "Home & Workshop",image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=280",height: 280},
+    
+    {title: "Liminal Spaces Philosophy",description: "Threshold between states. Airport at 4AM. Empty parking structure. Transitional non-places. Marc Augé's non-lieux. The architecture of nowhere.",user: "Marc A.",category: "Travel & Adventure",image: "https://images.unsplash.com/photo-1554310603-d39d43033735?w=400&h=340",height: 340},
+    
+    {title: "Brutalist Bus Stops USSR",description: "Soviet concrete art disguised as shelter. Christopher Herwig's photography book. Yugoslav futurism frozen in time. $1,200 collector's item.",user: "Christopher H.",category: "Travel & Adventure",image: "https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?w=400&h=290",height: 290},
+    
+    {title: "Planned Obsolescence Doc",description: "Lightbulb cartel. iPhone batteries. Right to repair fight. Products designed to fail. The Phoebus cartel. Capitalism's dirtiest secret, documented.",user: "Louis R.",category: "Tech & Gadgets",image: "https://images.unsplash.com/photo-1563770660941-20978e870e26?w=400&h=320",height: 320}
 ];
 
 // State
